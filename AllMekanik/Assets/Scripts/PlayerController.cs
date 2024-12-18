@@ -20,8 +20,13 @@ public class PlayerController : MonoBehaviour
 
    private void Update() {
       Movement();
-      if(levelSystem.attack){
+      if(levelSystem.attack && levelSystem.canShoot){
          Shoot();
+         levelSystem.canShoot = false;
+      } 
+
+      if(!levelSystem.attack){
+         levelSystem.canShoot = true;  
       }
    }
 

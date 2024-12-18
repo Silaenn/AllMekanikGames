@@ -20,6 +20,7 @@ public class LevelSystem : MonoBehaviour
    public float xpMultiplier = 1.5f;
    public bool run = false;
    public bool attack = false;
+   public bool canShoot = true;
    public List<Skill> skillTree;
 
    private void Start() {
